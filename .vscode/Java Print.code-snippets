@@ -1,0 +1,12 @@
+{
+	"Java: Print: Format": {
+		"prefix": "system-printf",
+		"body": ["System.out.printf(\"$0 \\n\");"],
+		"description": "Java: Print: Format"
+	},
+	"Java: Print: String Format": {
+		"prefix": "string.format",
+		"body": ["String.format(\"$0 \\n\");"],
+		"description": "Java: Print: String Format"
+	}
+}
