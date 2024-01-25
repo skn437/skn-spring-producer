@@ -5,7 +5,7 @@
 		"description": "Java: Print: Format"
 	},
 	"Java: Print: String Format": {
-		"prefix": "string.format",
+		"prefix": "string-format",
 		"body": ["String.format(\"$0 \\n\");"],
 		"description": "Java: Print: String Format"
 	}
