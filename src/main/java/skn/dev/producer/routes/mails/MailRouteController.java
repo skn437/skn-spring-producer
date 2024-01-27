@@ -28,20 +28,11 @@ public class MailRouteController {
     @RequestBody Gallery gallery,
     @RequestHeader Map<String, String> headers
   ) {
-    Gallery galleryData = new Gallery(
-      gallery.getTitle(),
-      gallery.getSrc(),
-      gallery.getAlt()
-    );
-
-    try {
-      if (headers.get("post").equals("posted")) {
-        return Flux.just(galleryData);
-      }
-      return Flux.just(new Gallery());
-    } catch (Exception e) {
-      System.out.printf("Error: %s \n", e.getMessage());
-      return Flux.just(new Gallery());
-    }
+    return this.mailRouteService.postMailRoute(
+        gallery.getTitle(),
+        gallery.getSrc(),
+        gallery.getAlt(),
+        headers
+      );
   }
 }
