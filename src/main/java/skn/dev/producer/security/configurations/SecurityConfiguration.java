@@ -14,7 +14,7 @@ public class SecurityConfiguration {
   ) {
     return http
       .authorizeExchange(exchange ->
-        exchange.pathMatchers("/csrf", "/skn").permitAll()
+        exchange.pathMatchers("/csrf", "/skn", "/wang").permitAll()
       )
       // .csrf(csrf ->
       //   csrf.csrfTokenRepository(
